@@ -71,18 +71,15 @@ ul {
   /* padding-top: 32px;
   padding-bottom: 32px; */
 }
-
 .header-list {
   display: flex;
 }
-
 .header-item:not(:last-child) {
   margin-right: 50px;
 }
 .header .container {
   display: flex;
 }
-
 .contacts {
   display: flex;
   align-items: center;
@@ -101,22 +98,18 @@ ul {
   letter-spacing: 0.02em;
   color: var(--header-link-color);
 }
-
 .header-list .header-link:hover,
 .header-list .header-link:focus {
   color: var(--link-color);
 }
-
 .header-list.header-link.current {
   color: var(--link-color);
 }
-
 .header-link {
   position: relative;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .current::after {
   content: "";
   position: absolute;
@@ -130,7 +123,6 @@ ul {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .mail {
   display: flex;
   align-items: center;
@@ -150,7 +142,6 @@ ul {
 .icon-mail:focus {
   color: var(--link-color);
 }
-
 .coll {
   margin-right: 50px;
 }
@@ -169,7 +160,6 @@ ul {
 .tel:focus {
   color: var(--link-color);
 }
-
 .icon-mail {
   width: 16px;
   height: 12px;
@@ -182,7 +172,6 @@ ul {
   margin-right: 10px;
   fill: currentColor;
 }
-
 /* -----------------hero------------------ */
 .hero {
   background-color: #2f303a;
@@ -289,7 +278,6 @@ ul {
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
   cursor: pointer;
-  
 }
 .icon-close {
   color: #000000;
@@ -366,7 +354,6 @@ ul {
   height: 70px;
   background: rgba(47, 48, 58, 0.8);
 }
-
 .pictures {
   padding-top: 0;
 }
@@ -431,7 +418,6 @@ ul {
   padding: 30px 5px;
   text-align: center;
 }
-
 .team-item {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -452,7 +438,6 @@ ul {
   width: 44px;
   height: 44px;
 }
-
 .team-soc-link {
   display: flex;
   align-items: center;
