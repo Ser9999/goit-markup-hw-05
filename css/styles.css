@@ -81,22 +81,6 @@ ul {
   display: flex;
 }
 
-/* .current {
-background-color: #2196f3;
-  
-}
-.current::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  display: block;
-  width: 100%;
-  height: 4px;
-  border-radius: 4px;
-  background-color: var(--accent-color);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-} */
-
 .contacts {
   display: flex;
   align-items: center;
@@ -166,6 +150,16 @@ background-color: #2196f3;
   height: 16px;
   margin-right: 10px;
   fill: currentColor;
+}
+
+.current::after {
+  content: "";
+  height: 4px;
+  border-radius: 2px;
+  display: block;
+  background-color: var(--link-color);
+  width: 100%;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 /* -----------------hero------------------ */
@@ -242,6 +236,7 @@ background-color: #2196f3;
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+  transition: 250ms;
 }
 .modal {
   position: absolute;
@@ -252,7 +247,39 @@ background-color: #2196f3;
   height: 581px;
   z-index: 1;
   background: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
+.modal-close {
+  position: absolute;
+
+  border-radius: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 8px;
+  top: 8px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  margin-top: 8px;
+  margin-right: 8px;
+}
+.icon-close {
+  color: #000000;
+}
+
+/* 
+.icon-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 8px;
+  margin-right: 8px;
+} */
 
 /*  -------------about --------------*/
 .visually-hidden {
@@ -577,6 +604,7 @@ background-color: #2196f3;
   letter-spacing: 0.03em;
   color: #ffffff;
   transform: translateY(100%);
+  transition: 250ms;
 }
 
 .portfolio-link:hover .action,
@@ -609,6 +637,7 @@ background-color: #2196f3;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: 250ms;
 }
 .button:focus,
 .button:hover,
@@ -661,4 +690,10 @@ background-color: #2196f3;
   border: 1px solid #eeeeee;
   padding: 20px 24px;
   border-top: none;
+}
+.portfolio-current {
+  border-radius: 4px;
+  background-color: var(--link-color);
+  width: 100%;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
