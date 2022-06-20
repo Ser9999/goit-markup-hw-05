@@ -36,6 +36,15 @@ ul {
 .link {
   text-decoration: none;
 }
+/* .link:hover {
+  display: block;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+} */
+
 /* ----------------logo ---------------------*/
 .logo-title {
   font-family: "Raleway", sans-serif;
@@ -97,18 +106,17 @@ ul {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--header-link-color);
+  position: relative;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-list .header-link:hover,
 .header-list .header-link:focus {
   color: var(--link-color);
 }
-.header-list.header-link.current {
+.header-list .header-link.current {
   color: var(--link-color);
-}
-.header-link {
-  position: relative;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .current::after {
   content: "";
@@ -130,6 +138,7 @@ ul {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--contacts-color);
@@ -152,6 +161,7 @@ ul {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--contacts-color);
@@ -224,6 +234,7 @@ ul {
   border: none;
   border-radius: 4px;
   letter-spacing: 0.06em;
+  transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -240,16 +251,18 @@ ul {
 
 .backdrop {
   position: fixed;
-  width: 1600px;
-  height: 1024px;
-  top: 0px;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
   z-index: 1;
-  background: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
+  transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -260,7 +273,7 @@ ul {
   transform: translate(-50%, -50%);
   width: 528px;
   height: 581px;
-  background: #ffffff;
+  background-color: #ffffff;
   border-radius: 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -271,6 +284,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0;
   right: 8px;
   top: 8px;
   width: 30px;
@@ -341,14 +355,13 @@ ul {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  margin: 0 auto;
   color: var(--hero-color);
-  margin-top: 27px;
-  margin-bottom: 27px;
 }
 .product {
   position: absolute;
   display: flex;
+  justify-content: center;
+  align-items: center;
   bottom: 0;
   width: 370px;
   height: 70px;
@@ -445,9 +458,9 @@ ul {
   width: 100%;
   height: 100%;
   border-radius: 50%;
+  transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
   background-color: #ffffff;
 }
 
@@ -493,6 +506,7 @@ ul {
   height: 100%;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -572,6 +586,7 @@ ul {
   height: 100%;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+  transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -611,11 +626,18 @@ ul {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.portfolio-link {
+  display: block;
+}
 .portfolio-link:hover .action,
 .portfolio-link:focus .action {
   transform: translateY(0%);
-  background: rgba(33, 150, 243, 0.9);
+  background-color: rgba(33, 150, 243, 0.9);
+}
+.portfolio-link:hover,
+.portfolio-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .portfolio-filtr {
   display: flex;
@@ -626,13 +648,7 @@ ul {
   margin-right: 8px;
 }
 
-.portfolio-item:hover {
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-}
 .button {
-  font-family: "Roboto";
-  font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
@@ -642,6 +658,7 @@ ul {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition-property: color, background-color, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -650,6 +667,8 @@ ul {
 .button:active {
   background-color: var(--link-color);
   color: var(--adress-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .button.current {
   background-color: var(--link-color);
@@ -664,10 +683,7 @@ ul {
   flex-basis: calc(100% / 3 - 30px);
   margin: 15px;
 }
-.flex-item:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}
+
 .portfolio-list .portfolio-filtr {
   font-family: inherit;
   font-weight: 500;
@@ -698,8 +714,8 @@ ul {
   border-top: none;
 }
 .portfolio-current {
+  color: #ffffff;
   border-radius: 4px;
   background-color: var(--link-color);
-  width: 100%;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
